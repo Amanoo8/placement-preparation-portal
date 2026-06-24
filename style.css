@@ -5,12 +5,12 @@ text-align:center;
 }
 
 .container{
-width:70%;
-margin:auto;
-margin-top:50px;
-background:white;
-padding:20px;
-box-shadow:0 0 10px gray;
+margin-top:100px;
+}
+
+input{
+padding:10px;
+width:250px;
 }
 
 button{
@@ -21,11 +21,17 @@ border:none;
 cursor:pointer;
 }
 
-button:hover{
-opacity:0.8;
+table{
+background:white;
+margin-top:20px;
 }
 
-input{
+th,td{
 padding:10px;
-width:250px;
+text-align:center;
+}
+
+#timer{
+color:red;
+font-size:30px;
 }
