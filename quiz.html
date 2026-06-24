@@ -2,63 +2,51 @@
 <html>
 <head>
 <title>Quiz</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
 
-<h2 id="welcome"></h2>
+<h1>Technical Quiz</h1>
 
-<h3 id="timer">
-Time Left: 60
-</h3>
+<h2 id="timer">60</h2>
+
+<form id="quizForm">
 
 <p>1. FIFO follows?</p>
-
-<input type="radio"
-       name="q1"
-       value="Queue">Queue
-
-<input type="radio"
-       name="q1"
-       value="Stack">Stack
+<input type="radio" name="q1" value="Queue"> Queue
+<input type="radio" name="q1" value="Stack"> Stack
 
 <hr>
 
 <p>2. Java is?</p>
-
-<input type="radio"
-       name="q2"
-       value="Programming Language">
-Programming Language
-
-<input type="radio"
-       name="q2"
-       value="Database">
-Database
+<input type="radio" name="q2" value="Programming Language"> Programming Language
+<input type="radio" name="q2" value="Database"> Database
 
 <hr>
 
 <p>3. 25% of 400?</p>
+<input type="radio" name="q3" value="100"> 100
+<input type="radio" name="q3" value="50"> 50
 
-<input type="radio"
-       name="q3"
-       value="100">100
+<hr>
 
-<input type="radio"
-       name="q3"
-       value="50">50
+<p>4. DBMS stands for?</p>
+<input type="radio" name="q4" value="Database Management System"> Database Management System
+<input type="radio" name="q4" value="Data Base Main System"> Data Base Main System
 
 <br><br>
 
-<button onclick="submitQuiz()">
-Submit
+<button type="button" onclick="submitQuiz()">
+Submit Quiz
 </button>
+
+</form>
 
 </div>
 
-<script src="script.js"></script>
+<script type="module" src="js/quiz.js"></script>
 
 </body>
 </html>
