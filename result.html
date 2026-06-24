@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Quiz Result</h1>
+
+<h2 id="score"></h2>
+
+</div>
+
+<script>
+
+let score =
+localStorage.getItem("score");
+
+document
+.getElementById("score")
+.innerHTML =
+"Your Score : " + score;
+
+</script>
+
+</body>
+</html>
