@@ -1,5 +1,5 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
     margin:0;
@@ -9,65 +9,124 @@
 }
 
 body{
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
     min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #7c3aed
+    );
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
+    padding:20px;
 }
 
-/* Main Container */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Main Card */
 .container{
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(10px);
+    width:100%;
+    max-width:600px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:25px;
     padding:40px;
-    border-radius:20px;
-    width:90%;
-    max-width:500px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.3);
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+    animation:fadeIn 1s ease;
 }
 
-/* Headings */
-h1,h2{
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Heading */
+h1{
+    color:white;
+    font-size:36px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+h2{
+    color:white;
     margin-bottom:20px;
+}
+
+.subtitle{
+    color:#dbeafe;
+    margin-bottom:30px;
 }
 
 /* Inputs */
 input{
     width:100%;
-    padding:12px;
-    margin:10px 0;
+    padding:14px;
     border:none;
-    border-radius:10px;
     outline:none;
+    border-radius:12px;
+    margin:10px 0;
     font-size:16px;
 }
 
 /* Buttons */
 button{
     width:100%;
-    padding:12px;
-    margin-top:15px;
+    padding:14px;
     border:none;
-    border-radius:10px;
-    background:#22c55e;
-    color:white;
+    border-radius:12px;
+    margin-top:15px;
     font-size:16px;
     font-weight:600;
     cursor:pointer;
+    color:white;
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
     transition:0.3s;
 }
 
 button:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Home Page Buttons */
+.home-btn{
+    display:block;
+    margin-top:15px;
+    text-decoration:none;
+}
+
+.home-btn button{
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
 }
 
 /* Links */
 a{
-    color:#fff;
+    color:#facc15;
     text-decoration:none;
-    font-weight:500;
 }
 
 a:hover{
@@ -78,38 +137,52 @@ a:hover{
 #msg{
     margin-top:15px;
     font-weight:bold;
+    color:#facc15;
 }
 
 /* Timer */
 #timer{
-    font-size:32px;
-    font-weight:bold;
-    color:#ffeb3b;
+    font-size:40px;
+    color:#facc15;
+    font-weight:800;
     margin-bottom:20px;
 }
 
 /* Quiz Options */
 .option{
     background:white;
-    color:black;
-    padding:12px;
-    margin:10px 0;
-    border-radius:10px;
+    color:#111827;
+    padding:15px;
+    border-radius:12px;
+    margin:12px 0;
     cursor:pointer;
     transition:0.3s;
+    font-weight:500;
 }
 
 .option:hover{
     background:#dbeafe;
+    transform:scale(1.02);
 }
 
-/* Leaderboard Table */
+/* Cards */
+.card{
+    background:white;
+    color:#111827;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Leaderboard */
 table{
     width:100%;
+    margin-top:20px;
     border-collapse:collapse;
     background:white;
     color:black;
-    border-radius:10px;
+    border-radius:15px;
     overflow:hidden;
 }
 
@@ -119,13 +192,42 @@ th{
 }
 
 th,td{
-    padding:12px;
+    padding:14px;
     border:1px solid #ddd;
 }
 
-/* Responsive */
+tr:hover{
+    background:#f3f4f6;
+}
+
+/* Dashboard Boxes */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.box{
+    background:white;
+    color:#111827;
+    padding:20px;
+    border-radius:15px;
+    font-weight:600;
+}
+
+/* Mobile */
 @media(max-width:600px){
+
     .container{
         padding:25px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
     }
 }
