@@ -74,7 +74,7 @@ password
 )
 .then(()=>{
 window.location=
-"quiz.html";
+"dashboard.html";
 })
 .catch(err=>{
 document.getElementById(
