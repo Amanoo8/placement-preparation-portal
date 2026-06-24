@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Preparation Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Placement Preparation Portal</h1>
+    <button id="themeBtn">Dark Mode</button>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Technical Quiz</h2>
+
+        <div id="quiz">
+
+            <p>1. Which data structure follows FIFO?</p>
+
+            <input type="radio" name="q1" value="Queue"> Queue <br>
+            <input type="radio" name="q1" value="Stack"> Stack <br>
+            <input type="radio" name="q1" value="Tree"> Tree <br>
+
+            <hr>
+
+            <p>2. Java is a?</p>
+
+            <input type="radio" name="q2" value="Programming Language">
+            Programming Language <br>
+
+            <input type="radio" name="q2" value="Database">
+            Database <br>
+
+            <input type="radio" name="q2" value="Operating System">
+            Operating System <br>
+
+            <hr>
+
+            <p>3. What is 25% of 400?</p>
+
+            <input type="radio" name="q3" value="100">100 <br>
+            <input type="radio" name="q3" value="50">50 <br>
+            <input type="radio" name="q3" value="75">75 <br>
+
+            <br>
+
+            <button onclick="submitQuiz()">
+                Submit
+            </button>
+
+        </div>
+
+        <h2 id="result"></h2>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
